@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <main>
-            @include('comics.index')
+            @yield('content')
         </main>
     </div>
 </body>
