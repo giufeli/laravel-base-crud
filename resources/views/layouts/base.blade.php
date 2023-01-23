@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="container">
+        <h1>@yield('title')</h1>
         <main>
             @yield('content')
         </main>

@@ -1,6 +1,14 @@
 @extends('layouts.base')
 
 @section('content')
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="btn btn-success">
+                <a href="/comics/create" class="text-white">Aggiungi fumetto</a>
+            </div>
+        </div>
+    </div>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -19,7 +27,7 @@
                 <tr>
                     <th scope="row">{{ $comic->id }}</th>
                     <td>{{ $comic->title }}</td>
-                    <td>{{ $comic->description }}</td>
+                    {{-- <td>{{ $comic->description }}</td> --}}
                     <td>{{ $comic->thumb }}</td>
                     <td>{{ $comic->price }}</td>
                     <td>{{ $comic->series }}</td>
