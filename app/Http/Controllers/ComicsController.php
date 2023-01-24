@@ -14,7 +14,7 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comics::all();
+        $comics = Comics::paginate(5);
         return view('comics.index', compact('comics'));
     }
 
@@ -48,7 +48,7 @@ class ComicsController extends Controller
         $listing->type  = $data['type'];
         $listing->save();
 
-        return redirect()->route('comics.show', ['comics' => $listing])->with('success_create', true);
+        return redirect()->route('comics.show', ['comic' => $listing])->with('success_create', true);
     }
 
     /**
